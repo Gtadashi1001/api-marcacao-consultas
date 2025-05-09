@@ -1,10 +1,7 @@
 package com.fiap.emr.api_marcacao_consultas.model;
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.time.LocalDateTime;
-
-
 @Data
 @Entity
 @Table(name = "consultas")
@@ -15,6 +12,6 @@ public class Consulta {
     private LocalDateTime dataHora;
     private String especialidade;
     @ManyToOne
-    @JoinColumn(name = "usuario.id")
+    @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 }
